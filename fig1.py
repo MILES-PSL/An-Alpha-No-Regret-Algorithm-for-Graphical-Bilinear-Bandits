@@ -68,12 +68,12 @@ for trial in range(trials):
     print("Best allocation : "+ str(allocation_max) +" - reward = %.2f" % (global_r_max))
     print("Worst allocation : "+ str(allocation_min) +" - reward = %.2f" % (global_r_min))
     
-    xi = 1/step
+    zeta = 1/step
     
     for i in range(step+1):
     
-        M_tilde[x_max,x_max]=(i*xi)*r_max/2
-        M_tilde[x_prime_max, x_prime_max]=(i*xi)*r_max/2
+        M_tilde[x_max,x_max]=(i*zeta)*r_max/2
+        M_tilde[x_prime_max, x_prime_max]=(i*zeta)*r_max/2
 
         gbb.M = M_tilde
 
